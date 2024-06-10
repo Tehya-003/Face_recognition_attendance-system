@@ -9,11 +9,11 @@ import pyodbc
 
 # MySQL database configuration
 db_config = {
-    'DRIVER': '{MySQL ODBC 8.4 ANSI Driver}',  
+    'DRIVER': '{MySQL ODBC 8.0 Driver}',  
     'SERVER': 'localhost',                
-    'DATABASE': 'face_recognition',     
-    'UID': 'root',               
-    'PWD': 'W@2915djkq#'                
+    'DATABASE': 'database name',     
+    'UID': 'username',               
+    'PWD': 'your password'                
 }
 
 # Function to recognize face
