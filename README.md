@@ -117,23 +117,24 @@ At first glance, the files in the repo may look intimidating and overwhelming. T
 ## How we built it
 ### AWS
 
-- **AWS S3 (Simple Storage Service)**:
+1. **AWS S3 (Simple Storage Service)**:
 * Created an S3 bucket named "famouspersons" to store images of employees.
 
-- **AWS DynamoDB**:
+2. **AWS DynamoDB**:
 * Created a DynamoDB table named "facerecognition" to store data related to employee face recognition, such as face IDs and full names.
 
-- **Lambda Function**:
+3. **Lambda Function**:
 * Developed a Lambda function named "lambdafunction.py" that is triggered by S3 events.
 * Utilized Rekognition to process uploaded images, detect faces, and match them against stored face templates.
 * Updated the "facerecognition" DynamoDB table with detected faces.
 
-- **File Upload Script**:
+4. **File Upload Script**:
 * Created a Python script named "putimages.py" to directly upload photos from your PC to the S3 bucket "famouspersons".
 * This script facilitates the process of uploading employee photos to AWS S3.
 
 ### MySQL
-- **Attendance Reporting (SQL Database)**:
+5. **Attendance Reporting (SQL Database)**:
+
 1.Two SQL tables have been made:
 * Employee Data Table: Contains detailed information about each employee, including their ID, name, and department.
 * Attendance Table: Logs attendance records with timestamps, employee names, and their attendance status (present/absent).
