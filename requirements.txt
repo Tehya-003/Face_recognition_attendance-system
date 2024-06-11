@@ -1,0 +1,6 @@
+```plaintext
+boto3
+opencv-python
+Pillow
+pyodbc
+tkinter
