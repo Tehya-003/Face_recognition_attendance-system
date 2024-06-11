@@ -31,7 +31,6 @@
 # Install Python Dependencies:
 
 ```bash
-Copy code
 pip install -r requirements.txt
 ```
 
@@ -42,7 +41,6 @@ pip install -r requirements.txt
 **Start the Application**:
 
 ```bash
-Copy code
 python facerecognition.py
 ```
 
@@ -54,8 +52,7 @@ python facerecognition.py
 
 # 🗄️ Database Setup
  1.**Create the Necessary Tables**:
-```ini
-sql
+```sql
 Copy code
 CREATE TABLE employees (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -83,7 +80,6 @@ Ensure AWS credentials are set up and that you have created a Rekognition collec
 Update the **db_config** dictionary in **facerecognition.py** with your MySQL database credentials.
 ``` ini
 python
-Copy code
 db_config = {
     'DRIVER': '{MySQL ODBC 8.0 Driver}',
     'SERVER': 'localhost',
@@ -95,11 +91,20 @@ db_config = {
 # 📊 Attendance Calculation
 Attendance is calculated based on a default 30-day period. If an employee is present, their attendance is recorded as a fraction (e.g., 1/30) and updated each day they are recognized.
 
+# 📂 Additional Scripts
+# putimages.py
+This script uploads images to an S3 bucket and assigns metadata to each image.
+
+# lambdafunction.py
+This AWS Lambda function indexes faces in the S3 bucket using Rekognition and updates a DynamoDB table with the face ID and full name.
+
 # Breaking Down the Repo
 At first glance, the files in the repo may look intimidating and overwhelming. To avoid that, here is a quick guide:
 
 - `.gitignore`: Specifies which files/folders to ignore when committing.
 - `facerecognition.py`: The main script that runs the face recognition and attendance system.
+- `putimages.py`:Script to upload images to S3 with metadata
+- `lambdafunction.py`:AWS Lambda function to index faces and update DynamoDB.
 - `requirements.txt`: List of Python dependencies needed for the project.
 - `README.md`: This readme file.
 
