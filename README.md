@@ -108,7 +108,6 @@ This AWS Lambda function indexes faces in the S3 bucket using Rekognition and up
 ### Breaking Down the Repo
 At first glance, the files in the repo may look intimidating and overwhelming. To avoid that, here is a quick guide:
 
-- `.gitignore`: Specifies which files/folders to ignore when committing.
 - `facerecognition.py`: The main script that runs the face recognition and attendance system.
 - `putimages.py`:Script to upload images to S3 with metadata
 - `lambdafunction.py`:AWS Lambda function to index faces and update DynamoDB.
