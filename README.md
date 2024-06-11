@@ -92,7 +92,7 @@ Update the **db_config** dictionary in **facerecognition.py** with your MySQL da
     [aws]
     REGION = us-east-1
     COLLECTION_ID = famouspersons
-    ```
+```
 
 ## 📊 Attendance Calculation
 Attendance is calculated based on a default 30-day period. If an employee is present, their attendance is recorded as a fraction (e.g., 1/30) and updated each day they are recognized.
