@@ -1,10 +1,12 @@
 # 📸Face Recognition Attendance System
- Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
+ Welcome to the Face Recognition Attendance System! Face Recognition Attendance System is an advanced end-to-end system that uses AWS Rekognition for face recognition and records attendance in an AWS RDS MySQL database.
+
+The system includes a user-friendly interface built with Tkinter, allowing real-time face recognition using a webcam. Recognized faces are recorded in the attendance database with date and time.
 
 ## 🚀 Features
 - **Real-time Face Recognition**: Capture photos in real-time using your webcam.
 - **AWS Rekognition Integration**: Identify faces using Amazon Rekognition.
-- **Automated Attendance Recording**: Store attendance records in a MySQL database.
+- **Automated Attendance Recording**: Attendance recorded in AWS RDS MySQL database.
 - **Attendance Calculation**: Calculate attendance based on a default 30-day period.
 - **User-friendly Interface**: Simple and intuitive Tkinter GUI.
 
@@ -16,10 +18,11 @@
 - Configuration
   
 ## 🛠 Requirements
-- Python 3.7+
+- Python 3.8+
 - Tkinter
 - OpenCV
 - Pillow
+- AWS RDS MySQL database
 - Boto3
 - PyODBC
 - MySQL
@@ -74,20 +77,23 @@ Populate the employees table with employee names and IDs.
 
 ## ⚙️ Configuration
  1. **AWS Configuration**:
-Ensure AWS credentials are set up and that you have created a Rekognition collection named **famouspersons** and a DynamoDB table named **facerecognition**.
+Ensure AWS credentials are set up and that you have created a Rekognition collection named **famouspersons** and a DynamoDB table named **facerecognition**.Ensure AWS credentials are configured on your machine for accessing Rekognition, DynamoDB, and RDS.
 
  2. **MySQL Configuration**:
 Update the **db_config** dictionary in **facerecognition.py** with your MySQL database credentials.
-``` ini
-python
-db_config = {
-    'DRIVER': '{MySQL ODBC 8.0 Driver}',
-    'SERVER': 'localhost',
-    'DATABASE': 'your_database_name',
-    'UID': 'your_username',
-    'PWD': 'your_password'
-}
-```
+```ini
+    [database]
+    DRIVER = {MySQL ODBC 8.0 Driver}
+    SERVER = your-rds-endpoint  # Replace with your AWS RDS endpoint
+    DATABASE = your_database_name
+    UID = your_username
+    PWD = your_password
+
+    [aws]
+    REGION = us-east-1
+    COLLECTION_ID = famouspersons
+    ```
+
 ## 📊 Attendance Calculation
 Attendance is calculated based on a default 30-day period. If an employee is present, their attendance is recorded as a fraction (e.g., 1/30) and updated each day they are recognized.
 
