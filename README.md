@@ -120,7 +120,7 @@ At first glance, the files in the repo may look intimidating and overwhelming. T
 
 - Run **python facerecognition.py** to launch the application.
 - Use the buttons in the GUI to start/stop the webcam and capture photos.
-- 
+  
 **Capture and Recognize**:
 
 - When you capture a photo, the image is saved locally and analyzed by AWS Rekognition.
