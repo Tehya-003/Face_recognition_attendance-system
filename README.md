@@ -1,5 +1,5 @@
-📸 Face Recognition Attendance System
-Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
+Face Recognition Attendance System
+> Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
 
 🚀 Features
 Real-time Face Recognition: Capture photos in real-time using your webcam.
