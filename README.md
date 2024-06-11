@@ -143,17 +143,17 @@ This Python script is an Attendance System that integrates face recognition, ima
 
 Here's a breakdown of its functionality:
 
-- #### MySQL Database Configuration: The script initializes a dictionary db_config with MySQL database connection parameters like driver, server, database name, username, and password.
+- **MySQL Database Configuration**: The script initializes a dictionary db_config with MySQL database connection parameters like driver, server, database name, username, and password.
 
-- #### Recognize Face Function: The recognize_face function takes an image path as input, detects faces in the image using AWS Rekognition, matches them against a database of known faces stored in DynamoDB, and records attendance in the MySQL database for recognized individuals.
+-  **Recognize Face Function**: The recognize_face function takes an image path as input, detects faces in the image using AWS Rekognition, matches them against a database of known faces stored in DynamoDB, and records attendance in the MySQL database for recognized individuals.
 
-- #### Record Attendance Function: The record_attendance function records attendance in the MySQL database for recognized individuals. It checks if the employee is already marked present for the current date and calculates the number of unique days the employee has been present.
+- **Record Attendance Function**: The record_attendance function records attendance in the MySQL database for recognized individuals. It checks if the employee is already marked present for the current date and calculates the number of unique days the employee has been present.
 
-- #### Webcam Functions: Functions like start_webcam, stop_webcam, and capture_photo handle webcam access and image capture. They use OpenCV to capture frames from the webcam, convert them to PIL images, and display them in a Tkinter window.
+- **Webcam Functions**: Functions like start_webcam, stop_webcam, and capture_photo handle webcam access and image capture. They use OpenCV to capture frames from the webcam, convert them to PIL images, and display them in a Tkinter window.
 
-- #### Tkinter GUI: The script creates a simple Tkinter GUI with buttons to start/stop the webcam and capture a photo. It displays the webcam feed and captured images in a Tkinter label.
+- **Tkinter GUI**: The script creates a simple Tkinter GUI with buttons to start/stop the webcam and capture a photo. It displays the webcam feed and captured images in a Tkinter label.
 
-- #### Main Loop: The main loop (window.mainloop()) runs the Tkinter GUI, allowing users to interact with the webcam and capture photos.
+- **Main Loop**: The main loop (window.mainloop()) runs the Tkinter GUI, allowing users to interact with the webcam and capture photos.
 
 
 ## How it Works
