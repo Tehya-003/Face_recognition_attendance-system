@@ -2,30 +2,29 @@
 > Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
 
 # 🚀 Features
--Real-time Face Recognition: Capture photos in real-time using your webcam.
--AWS Rekognition Integration: Identify faces using Amazon Rekognition.
--Automated Attendance Recording: Store attendance records in a MySQL database.
--Attendance Calculation: Calculate attendance based on a default 30-day period.
--User-friendly Interface: Simple and intuitive Tkinter GUI.
+- Real-time Face Recognition: Capture photos in real-time using your webcam.
+- AWS Rekognition Integration: Identify faces using Amazon Rekognition.
+- Automated Attendance Recording: Store attendance records in a MySQL database.
+- Attendance Calculation: Calculate attendance based on a default 30-day period.
+- User-friendly Interface: Simple and intuitive Tkinter GUI.
 
 # 📋 Table of Contents
--Requirements
--Installation
--Usage
--Database Setup
--Configuration
--License
-
+- Requirements
+- Installation
+- Usage
+- Database Setup
+- Configuration
+  
 # 🛠 Requirements
--Python 3.7+
--Tkinter
--OpenCV
--Pillow
--Boto3
--PyODBC
--MySQL
--MySQL ODBC 8.0 Driver
--AWS Account with Rekognition and DynamoDB configured
+- Python 3.7+
+- Tkinter
+- OpenCV
+- Pillow
+- Boto3
+- PyODBC
+- MySQL
+- MySQL ODBC 8.0 Driver
+- AWS Account with Rekognition and DynamoDB configured
 
 # 📦 Installation:
 
@@ -82,23 +81,23 @@ Update the db_config dictionary in g.py with your MySQL database credentials.
 
 python
 Copy code
-db_config = {
+<db_config = {
     'DRIVER': '{MySQL ODBC 8.0 Driver}',
     'SERVER': 'localhost',
     'DATABASE': 'your_database_name',
     'UID': 'your_username',
     'PWD': 'your_password'
-}
+}>
 # 📊 Attendance Calculation
 Attendance is calculated based on a default 30-day period. If an employee is present, their attendance is recorded as a fraction (e.g., 1/30) and updated each day they are recognized.
 
 # Breaking Down the Repo
 At first glance, the files in the repo may look intimidating and overwhelming. To avoid that, here is a quick guide:
 
--.gitignore: Specifies which files/folders to ignore when committing.
--facerecognition.py: The main script that runs the face recognition and attendance system.
--requirements.txt: List of Python dependencies needed for the project.
--README.md: This readme file.
+- .gitignore: Specifies which files/folders to ignore when committing.
+- facerecognition.py: The main script that runs the face recognition and attendance system.
+- requirements.txt: List of Python dependencies needed for the project.
+- README.md: This readme file.
 
 # How it Works
 Start the Application:
