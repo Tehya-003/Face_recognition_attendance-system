@@ -114,6 +114,48 @@ At first glance, the files in the repo may look intimidating and overwhelming. T
 - `requirements.txt`: List of Python dependencies needed for the project.
 - `README.md`: This readme file.
 
+## How we built it
+### AWS
+
+- **AWS S3 (Simple Storage Service)**:
+* Created an S3 bucket named "famouspersons" to store images of employees.
+
+- **AWS DynamoDB**:
+* Created a DynamoDB table named "facerecognition" to store data related to employee face recognition, such as face IDs and full names.
+
+- **Lambda Function**:
+* Developed a Lambda function named "lambdafunction.py" that is triggered by S3 events.
+* Utilized Rekognition to process uploaded images, detect faces, and match them against stored face templates.
+* Updated the "facerecognition" DynamoDB table with detected faces.
+
+- **File Upload Script**:
+* Created a Python script named "putimages.py" to directly upload photos from your PC to the S3 bucket "famouspersons".
+* This script facilitates the process of uploading employee photos to AWS S3.
+
+### MySQL
+- **Attendance Reporting (SQL Database)**:
+1.Two SQL tables have been made:
+* Employee Data Table: Contains detailed information about each employee, including their ID, name, and department.
+* Attendance Table: Logs attendance records with timestamps, employee names, and their attendance status (present/absent).
+
+### About facerecognition.py
+This Python script is an Attendance System that integrates face recognition, image capture from a webcam, and database operations using Tkinter for the GUI, OpenCV for webcam access, Pillow for image processing, Boto3 for AWS services integration (Rekognition and DynamoDB), and pyodbc for MySQL database connectivity.
+
+Here's a breakdown of its functionality:
+
+- #### MySQL Database Configuration: The script initializes a dictionary db_config with MySQL database connection parameters like driver, server, database name, username, and password.
+
+- #### Recognize Face Function: The recognize_face function takes an image path as input, detects faces in the image using AWS Rekognition, matches them against a database of known faces stored in DynamoDB, and records attendance in the MySQL database for recognized individuals.
+
+- #### Record Attendance Function: The record_attendance function records attendance in the MySQL database for recognized individuals. It checks if the employee is already marked present for the current date and calculates the number of unique days the employee has been present.
+
+- #### Webcam Functions: Functions like start_webcam, stop_webcam, and capture_photo handle webcam access and image capture. They use OpenCV to capture frames from the webcam, convert them to PIL images, and display them in a Tkinter window.
+
+- #### Tkinter GUI: The script creates a simple Tkinter GUI with buttons to start/stop the webcam and capture a photo. It displays the webcam feed and captured images in a Tkinter label.
+
+- #### Main Loop: The main loop (window.mainloop()) runs the Tkinter GUI, allowing users to interact with the webcam and capture photos.
+
+
 ## How it Works
 **Start the Application**:
 
