@@ -133,9 +133,9 @@ At first glance, the files in the repo may look intimidating and overwhelming. T
 * This script facilitates the process of uploading employee photos to AWS S3.
 
 ### MySQL
-5. **Attendance Reporting (SQL Database)**:
+1. **Attendance Reporting (SQL Database)**:
 
-1.Two SQL tables have been made:
+Two SQL tables have been made:
 * Employee Data Table: Contains detailed information about each employee, including their ID, name, and department.
 * Attendance Table: Logs attendance records with timestamps, employee names, and their attendance status (present/absent).
 
