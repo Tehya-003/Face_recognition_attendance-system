@@ -1,53 +1,57 @@
-Face Recognition Attendance System
+# 📸Face Recognition Attendance System
 > Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
 
-🚀 Features
-Real-time Face Recognition: Capture photos in real-time using your webcam.
-AWS Rekognition Integration: Identify faces using Amazon Rekognition.
-Automated Attendance Recording: Store attendance records in a MySQL database.
-Attendance Calculation: Calculate attendance based on a default 30-day period.
-User-friendly Interface: Simple and intuitive Tkinter GUI.
+# 🚀 Features
+-Real-time Face Recognition: Capture photos in real-time using your webcam.
+-AWS Rekognition Integration: Identify faces using Amazon Rekognition.
+-Automated Attendance Recording: Store attendance records in a MySQL database.
+-Attendance Calculation: Calculate attendance based on a default 30-day period.
+-User-friendly Interface: Simple and intuitive Tkinter GUI.
 
-📋 Table of Contents
-Requirements
-Installation
-Usage
-Database Setup
-Configuration
-License
+# 📋 Table of Contents
+-Requirements
+-Installation
+-Usage
+-Database Setup
+-Configuration
+-License
 
-🛠 Requirements
-Python 3.7+
-Tkinter
-OpenCV
-Pillow
-Boto3
-PyODBC
-MySQL
-MySQL ODBC 8.0 Driver
-AWS Account with Rekognition and DynamoDB configured
-📦 Installation:
+# 🛠 Requirements
+-Python 3.7+
+-Tkinter
+-OpenCV
+-Pillow
+-Boto3
+-PyODBC
+-MySQL
+-MySQL ODBC 8.0 Driver
+-AWS Account with Rekognition and DynamoDB configured
 
-Install Python Dependencies:
+# 📦 Installation:
+
+# Install Python Dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
-Install MySQL ODBC Driver:
+
+# Install MySQL ODBC Driver:
 Download and install the MySQL ODBC 8.0 Driver from MySQL's official website.
 
-🎮 Usage
+# 🎮 Usage
 Start the Application:
 
 bash
 Copy code
-python g.py
-Interact with the GUI:
+python facerecognition.py
+
+# Interact with the GUI:
 
 Start Webcam: Opens the webcam and starts the live feed.
 Stop Webcam: Stops the webcam feed.
 Capture Photo: Captures a photo, recognizes the face, and records attendance.
-🗄️ Database Setup
+
+# 🗄️ Database Setup
 Create the Necessary Tables:
 
 sql
@@ -69,7 +73,7 @@ CREATE TABLE attendance (
 Insert Employee Data:
 Populate the employees table with employee names and IDs.
 
-⚙️ Configuration
+# ⚙️ Configuration
 AWS Configuration:
 Ensure AWS credentials are set up and that you have created a Rekognition collection named famouspersons and a DynamoDB table named facerecognition.
 
@@ -85,20 +89,18 @@ db_config = {
     'UID': 'your_username',
     'PWD': 'your_password'
 }
-📊 Attendance Calculation
+# 📊 Attendance Calculation
 Attendance is calculated based on a default 30-day period. If an employee is present, their attendance is recorded as a fraction (e.g., 1/30) and updated each day they are recognized.
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Breaking Down the Repo
+# Breaking Down the Repo
 At first glance, the files in the repo may look intimidating and overwhelming. To avoid that, here is a quick guide:
 
-.gitignore: Specifies which files/folders to ignore when committing.
-g.py: The main script that runs the face recognition and attendance system.
-requirements.txt: List of Python dependencies needed for the project.
-README.md: This readme file.
-How it Works
+-.gitignore: Specifies which files/folders to ignore when committing.
+-facerecognition.py: The main script that runs the face recognition and attendance system.
+-requirements.txt: List of Python dependencies needed for the project.
+-README.md: This readme file.
+
+# How it Works
 Start the Application:
 
 Run python g.py to launch the application.
@@ -113,6 +115,7 @@ Attendance Calculation:
 Attendance is tracked over a 30-day period.
 Each presence is recorded as a fraction of the total period (e.g., 1/30).
 Daily attendance is updated automatically.
-Contributors
-Your Name: GitHub Profile
-Made with ❤️ by Your Name
+
+# Contributors
+Your Name: Tehya-003
+Made with ❤️ by Yellapu Tehya Poorna Seetu Akshaya
