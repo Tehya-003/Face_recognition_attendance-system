@@ -176,5 +176,5 @@ Here's a breakdown of its functionality:
 - Daily attendance is updated automatically.
 
 ## Contributors
-* Your Name: Tehya-003
+* Your Name: Tehya Akshaya Yellapu
 * Made with ❤️ by Yellapu Tehya Poorna Seetu Akshaya
