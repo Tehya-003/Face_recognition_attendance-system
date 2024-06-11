@@ -1,12 +1,12 @@
 # 📸Face Recognition Attendance System
-> Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
+ Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
 
 # 🚀 Features
-- Real-time Face Recognition: Capture photos in real-time using your webcam.
-- AWS Rekognition Integration: Identify faces using Amazon Rekognition.
-- Automated Attendance Recording: Store attendance records in a MySQL database.
-- Attendance Calculation: Calculate attendance based on a default 30-day period.
-- User-friendly Interface: Simple and intuitive Tkinter GUI.
+- **Real-time Face Recognition**: Capture photos in real-time using your webcam.
+- **AWS Rekognition Integration**: Identify faces using Amazon Rekognition.
+- **Automated Attendance Recording**: Store attendance records in a MySQL database.
+- **Attendance Calculation**: Calculate attendance based on a default 30-day period.
+- **User-friendly Interface**: Simple and intuitive Tkinter GUI.
 
 # 📋 Table of Contents
 - Requirements
