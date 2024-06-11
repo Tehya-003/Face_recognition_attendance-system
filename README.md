@@ -51,7 +51,7 @@ python facerecognition.py
 - Capture Photo: Captures a photo, recognizes the face, and records attendance.
 
 # 🗄️ Database Setup
-1.**Create the Necessary Tables**:
+* 1.**Create the Necessary Tables**:
 
 sql
 Copy code
@@ -69,14 +69,14 @@ CREATE TABLE attendance (
     time TIME NOT NULL,
     FOREIGN KEY (employee_id) REFERENCES employees(id)
 );
-2.**Insert Employee Data**:
+* 2.**Insert Employee Data**:
 Populate the employees table with employee names and IDs.
 
 # ⚙️ Configuration
-1. **AWS Configuration**:
+* 1. **AWS Configuration**:
 Ensure AWS credentials are set up and that you have created a Rekognition collection named **famouspersons** and a DynamoDB table named **facerecognition**.
 
-2. **MySQL Configuration**:
+* 2. **MySQL Configuration**:
 Update the **db_config** dictionary in **facerecognition.py** with your MySQL database credentials.
 
 python
@@ -118,7 +118,5 @@ At first glance, the files in the repo may look intimidating and overwhelming. T
 - Daily attendance is updated automatically.
 
 # Contributors
-Your Name: Tehya-003
-
-
-Made with ❤️ by Yellapu Tehya Poorna Seetu Akshaya
+* Your Name: Tehya-003
+* Made with ❤️ by Yellapu Tehya Poorna Seetu Akshaya
