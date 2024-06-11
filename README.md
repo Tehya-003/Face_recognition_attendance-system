@@ -7,6 +7,7 @@ AWS Rekognition Integration: Identify faces using Amazon Rekognition.
 Automated Attendance Recording: Store attendance records in a MySQL database.
 Attendance Calculation: Calculate attendance based on a default 30-day period.
 User-friendly Interface: Simple and intuitive Tkinter GUI.
+
 📋 Table of Contents
 Requirements
 Installation
@@ -14,6 +15,7 @@ Usage
 Database Setup
 Configuration
 License
+
 🛠 Requirements
 Python 3.7+
 Tkinter
@@ -24,13 +26,8 @@ PyODBC
 MySQL
 MySQL ODBC 8.0 Driver
 AWS Account with Rekognition and DynamoDB configured
-📦 Installation
-Clone the Repository:
+📦 Installation:
 
-bash
-Copy code
-git clone https://github.com/yourusername/facerecognition-attendance-system.git
-cd facerecognition-attendance-system
 Install Python Dependencies:
 
 bash
