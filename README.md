@@ -1,21 +1,21 @@
-# 📸Face Recognition Attendance System
+## 📸Face Recognition Attendance System
  Welcome to the Face Recognition Attendance System! This innovative project leverages Amazon Rekognition, a live webcam feed, and MySQL to create a seamless and efficient attendance recording system.
 
-# 🚀 Features
+### 🚀 Features
 - **Real-time Face Recognition**: Capture photos in real-time using your webcam.
 - **AWS Rekognition Integration**: Identify faces using Amazon Rekognition.
 - **Automated Attendance Recording**: Store attendance records in a MySQL database.
 - **Attendance Calculation**: Calculate attendance based on a default 30-day period.
 - **User-friendly Interface**: Simple and intuitive Tkinter GUI.
 
-# 📋 Table of Contents
+### 📋 Table of Contents
 - Requirements
 - Installation
 - Usage
 - Database Setup
 - Configuration
   
-# 🛠 Requirements
+### 🛠 Requirements
 - Python 3.7+
 - Tkinter
 - OpenCV
@@ -30,9 +30,10 @@
 
 # Install Python Dependencies:
 
-bash
+```bash
 Copy code
 pip install -r requirements.txt
+```
 
 # Install MySQL ODBC Driver:
  #### Download and install the MySQL ODBC 8.0 Driver from [**MySQL's official website**](https://dev.mysql.com/downloads/connector/odbc/).
@@ -40,9 +41,10 @@ pip install -r requirements.txt
 # 🎮 Usage
 **Start the Application**:
 
-bash
+```bash
 Copy code
 python facerecognition.py
+```
 
 # Interact with the GUI:
 
@@ -52,7 +54,7 @@ python facerecognition.py
 
 # 🗄️ Database Setup
  1.**Create the Necessary Tables**:
-
+```ini
 sql
 Copy code
 CREATE TABLE employees (
@@ -69,6 +71,7 @@ CREATE TABLE attendance (
     time TIME NOT NULL,
     FOREIGN KEY (employee_id) REFERENCES employees(id)
 );
+```
  2.**Insert Employee Data**:
 Populate the employees table with employee names and IDs.
 
@@ -78,7 +81,7 @@ Ensure AWS credentials are set up and that you have created a Rekognition collec
 
  2. **MySQL Configuration**:
 Update the **db_config** dictionary in **facerecognition.py** with your MySQL database credentials.
-
+``` ini
 python
 Copy code
 db_config = {
@@ -88,6 +91,7 @@ db_config = {
     'UID': 'your_username',
     'PWD': 'your_password'
 }
+```
 # 📊 Attendance Calculation
 Attendance is calculated based on a default 30-day period. If an employee is present, their attendance is recorded as a fraction (e.g., 1/30) and updated each day they are recognized.
 
