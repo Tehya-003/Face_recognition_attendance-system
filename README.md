@@ -84,7 +84,7 @@ Update the **db_config** dictionary in **facerecognition.py** with your MySQL da
 ```ini
     [database]
     DRIVER = {MySQL ODBC 8.0 Driver}
-    SERVER = your-rds-endpoint  # Replace with your AWS RDS endpoint
+    SERVER = localhost
     DATABASE = your_database_name
     UID = your_username
     PWD = your_password
